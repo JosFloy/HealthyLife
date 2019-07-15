@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">HealthLife</string>
+    <string name="boy">男孩</string>
+    <string name="girl">女孩</string>
+    <string name="please_write_nick">请输入昵称</string>
+    <string name="birthday">生日</string>
+    <string name="please_write_birthday">请输入生日</string>
+    <string name="height">体重</string>
+    <string name="please_write_height">请输入体重</string>
+    <string name="next">更多</string>
+    <string name="weight">体重</string>
+    <string name="default_weight">默认体重</string>
+    <string name="length">身高</string>
+    <string name="default_length">默认身高</string>
+    <string name="walk">步数</string>
+    <string name="make_a_plan">制定计划</string>
+    <string name="nick">昵称</string>
+    <string name="sport_txt">运动</string>
+    <string name="find_txt">发现</string>
+    <string name="heart_txt">心率</string>
+    <string name="mine_txt">我的</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

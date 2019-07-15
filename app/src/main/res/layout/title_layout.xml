@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title_back"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/width_size_50">
+
+    <ImageView
+        android:id="@+id/left_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/width_size_10"
+        android:scaleType="center"
+        android:src="@mipmap/mrkj_back" />
+
+    <TextView
+        android:id="@+id/titles"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/width_size_5"
+        android:gravity="center"
+        android:text="title"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_20"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/right_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/width_size_10"
+        android:scaleType="center"
+        android:src="@mipmap/other"
+        android:visibility="invisible" />
+</RelativeLayout>
+

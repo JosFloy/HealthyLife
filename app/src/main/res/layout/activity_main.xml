@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <include
+        android:id="@+id/title_chunk"
+        layout="@layout/title_layout" />
+    <!-- 完善资料1/2布局 用于设置性别、昵称、生日、身高 -->
+    <LinearLayout
+        android:id="@+id/personal_information_page_one"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_chunk"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_size_0"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/width_size_5"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/boy"
+                    style="@style/MyCheck"
+                    android:layout_width="@dimen/width_size_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableTop="@drawable/sex_boy_selector"
+                    android:gravity="center_horizontal"
+                    android:text="@string/boy"
+                    android:textSize="@dimen/font_size_18" />
+
+                <RadioButton
+                    android:id="@+id/girl"
+                    style="@style/MyCheck"
+                    android:layout_width="@dimen/width_size_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableTop="@drawable/sex_girl_selector"
+                    android:gravity="center_horizontal"
+                    android:text="@string/girl"
+                    android:textSize="@dimen/font_size_18" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/width_size_30"
+                android:paddingTop="@dimen/width_size_20"
+                android:paddingRight="@dimen/width_size_30"
+                android:paddingBottom="@dimen/width_size_20">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/width_size_20"
+                    android:text="@string/nick"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_18" />
+
+                <EditText
+                    android:id="@+id/input_nick"
+                    android:layout_width="@dimen/width_size_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_edit_selector"
+                    android:focusable="false"
+                    android:gravity="right"
+                    android:hint="@string/please_write_nick"
+                    android:maxLength="6"
+                    android:singleLine="true"
+                    android:textSize="@dimen/font_size_18" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/width_size_30"
+                android:paddingTop="@dimen/width_size_20"
+                android:paddingRight="@dimen/width_size_30"
+                android:paddingBottom="@dimen/width_size_20">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/width_size_20"
+                    android:text="@string/birthday"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/btn_gray"
+                    android:textSize="@dimen/font_size_18" />
+
+                <TextView
+                    android:id="@+id/input_birthday"
+                    android:layout_width="@dimen/width_size_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_text_selector"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="@string/please_write_birthday"
+                    android:textColor="@color/btn_gray"
+                    android:textSize="@dimen/font_size_18" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/width_size_30"
+                android:paddingTop="@dimen/width_size_20"
+                android:paddingRight="@dimen/width_size_30"
+                android:paddingBottom="@dimen/width_size_20">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/width_size_20"
+                    android:text="@string/height"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/btn_gray"
+                    android:textSize="@dimen/font_size_18" />
+
+                <TextView
+                    android:id="@+id/input_height"
+                    android:layout_width="@dimen/width_size_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_edit_selector"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="@string/please_write_height"
+                    android:textColor="@color/btn_gray"
+                    android:textSize="@dimen/font_size_18" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/width_size_5"
+            android:background="@drawable/btn_blue_selector"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_20" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/choose_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/choose_height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <mrkj.library.wheelview.pickerView.PickerView
+            android:id="@+id/height_picker"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_size_50" />
+    </LinearLayout>
+    <!-- 完善资料2/2布局 用于设置体重、步长 -->
+    <LinearLayout
+        android:id="@+id/personal_information_page_two"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_chunk"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/width_size_30"
+        android:paddingRight="@dimen/width_size_30">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/width_size_10"
+            android:text="@string/weight"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_20" />
+
+        <mrkj.library.wheelview.scalerulerview.ScaleRulerView
+            android:id="@+id/input_weight"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_size_60"
+            android:layout_marginBottom="@dimen/width_size_10"
+            android:background="@color/white"
+            app:mNormalLineColor="@color/btn_gray"
+            app:mSelectPaintColor="@color/theme_blue_two" />
+
+        <TextView
+            android:id="@+id/show_weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/width_size_10"
+            android:gravity="center"
+            android:text="@string/default_weight"
+            android:textColor="@color/theme_blue_two"
+            android:textSize="@dimen/font_size_20" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/width_size_10"
+            android:text="@string/length"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_20" />
+
+        <mrkj.library.wheelview.scalerulerview.ScaleRulerView
+            android:id="@+id/input_length"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_size_60"
+            android:layout_marginBottom="@dimen/width_size_10"
+            android:background="@color/white"
+            app:mNormalLineColor="@color/btn_gray"
+            app:mSelectPaintColor="@color/theme_blue_two" />
+
+        <TextView
+            android:id="@+id/show_length"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/width_size_30"
+            android:gravity="center"
+            android:text="@string/default_length"
+            android:textColor="@color/theme_blue_two"
+            android:textSize="@dimen/font_size_20" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/walk"
+                android:layout_width="@dimen/width_size_0"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/width_size_5"
+                android:layout_weight="1"
+                android:background="@drawable/btn_blue_selector"
+                android:text="@string/walk"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_20" />
+
+            <Button
+                android:id="@+id/make"
+                android:layout_width="@dimen/width_size_0"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/width_size_5"
+                android:layout_weight="1"
+                android:background="@drawable/btn_blue_selector"
+                android:text="@string/make_a_plan"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_20" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MyTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <style name="MyCheck" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:textColor">@drawable/text_color_selector</item>
+    </style>
+
+    <style name="MyBottomBarCheck" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:textColor">@drawable/text_color_blue_selector</item>
+    </style>
+
+    <style name="Theme.BackgroundTranslucent" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@mipmap/mrkj</item>
+    </style>
+
+    <style name="transcutestyle" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowFrame">@android:color/transparent</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimAmount">0.3</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+</resources>
